@@ -4,29 +4,32 @@
 > Xem [examples/sample-bug-report.md](../examples/sample-bug-report.md) để hiểu cách viết bug report tốt.
 > Mỗi bug cần: tiêu đề mô tả hành vi lỗi, bước tái hiện, expected vs actual, severity + giải thích.
 
-| Thông tin | |
-|---|---|
-| **Nhóm** | `<!-- Tên nhóm -->` |
-| **Ngày báo cáo** | `<!-- DD/MM/YYYY -->` |
+| Thông tin        |               |
+| ---------------- | ------------- |
+| **Nhóm**         | stqa_group_15 |
+| **Ngày báo cáo** | 24/05/2026    |
+
+> Chưa có bug report vì nhóm chưa thực thi test case trên hệ thống.
 
 ---
 
 ## BUG-01
 
-| Thuộc tính | Chi tiết |
-|-----------|---------|
-| **Mã lỗi** | BUG-01 |
-| **TC liên quan** | `<!-- TC-xx -->` |
-| **REQ liên quan** | `<!-- REQ-xx -->` |
-| **Mức độ** | `<!-- High / Medium / Low -->` |
-| **Người phát hiện** | `<!-- Họ tên thành viên -->` |
-| **Ngày phát hiện** | `<!-- DD/MM/YYYY -->` |
-| **Trạng thái** | `<!-- Open / Closed -->` |
+| Thuộc tính          | Chi tiết                       |
+| ------------------- | ------------------------------ |
+| **Mã lỗi**          | BUG-01                         |
+| **TC liên quan**    | `<!-- TC-xx -->`               |
+| **REQ liên quan**   | `<!-- REQ-xx -->`              |
+| **Mức độ**          | `<!-- High / Medium / Low -->` |
+| **Người phát hiện** | `<!-- Họ tên thành viên -->`   |
+| **Ngày phát hiện**  | `<!-- DD/MM/YYYY -->`          |
+| **Trạng thái**      | `<!-- Open / Closed -->`       |
 
 **Tiêu đề:**
 `<!-- Mô tả hành vi lỗi cụ thể -->`
 
 **Môi trường:**
+
 - Trình duyệt: Chrome `<!-- version -->`
 - Hệ điều hành: `<!-- OS -->`
 - Ngôn ngữ giao diện: Tiếng Việt
@@ -35,6 +38,7 @@
 `<!-- VD: Trang đăng nhập đã mở, dữ liệu đã reset -->`
 
 **Bước tái hiện:**
+
 1. `<!-- Bước 1 -->`
 2. `<!-- Bước 2 -->`
 3. `<!-- Bước 3 -->`
@@ -52,26 +56,27 @@
 `<!-- Đính kèm ảnh chụp màn hình nếu có -->`
 
 **Đề xuất xử lý:**
-`<!-- Gợi ý cách sửa lỗi nếu có -->` 
+`<!-- Gợi ý cách sửa lỗi nếu có -->`
 
 ---
 
 ## BUG-02
 
-| Thuộc tính | Chi tiết |
-|-----------|---------|
-| **Mã lỗi** | BUG-02 |
-| **TC liên quan** | `<!-- TC-xx -->` |
-| **REQ liên quan** | `<!-- REQ-xx -->` |
-| **Mức độ** | `<!-- High / Medium / Low -->` |
-| **Người phát hiện** | `<!-- Họ tên thành viên -->` |
-| **Ngày phát hiện** | `<!-- DD/MM/YYYY -->` |
-| **Trạng thái** | `<!-- Open / Closed -->` |
+| Thuộc tính          | Chi tiết                       |
+| ------------------- | ------------------------------ |
+| **Mã lỗi**          | BUG-02                         |
+| **TC liên quan**    | `<!-- TC-xx -->`               |
+| **REQ liên quan**   | `<!-- REQ-xx -->`              |
+| **Mức độ**          | `<!-- High / Medium / Low -->` |
+| **Người phát hiện** | `<!-- Họ tên thành viên -->`   |
+| **Ngày phát hiện**  | `<!-- DD/MM/YYYY -->`          |
+| **Trạng thái**      | `<!-- Open / Closed -->`       |
 
 **Tiêu đề:**
 `<!-- Mô tả hành vi lỗi -->`
 
 **Bước tái hiện:**
+
 1. `<!-- -->`
 2. `<!-- -->`
 3. `<!-- -->`

@@ -6,7 +6,7 @@
 
 ## 2 Cái bẫy khi dùng AI cho kiểm thử thủ công
 
-### Bẫy 1: Weak Oracle — AI viết Expected Result hời hợt
+### Bẫy 1: Weak Oracadmin123le — AI viết Expected Result hời hợt
 
 AI thường sinh expected result mơ hồ kiểu *"Hệ thống hoạt động bình thường"* hoặc *"Trang hiển thị kết quả"* — đó là **Null Oracle** (Ch.14). Bug thật sẽ lọt qua vì bạn không biết **cụ thể** phải kiểm tra gì.
 

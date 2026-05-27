@@ -8,12 +8,12 @@
 
 ## Tài khoản Thủ thư / Librarian Account
 
-| Mục | Giá trị |
-|-----|---------|
-| Email | `librarian@library.com` |
-| Mật khẩu | `admin123` |
-| Vai trò | Thủ thư (Librarian) |
-| Tên hiển thị | Nguyễn Thủ Thư |
+| Mục          | Giá trị                 |
+| ------------ | ----------------------- |
+| Email        | `librarian@library.com` |
+| Mật khẩu     | `admin123`              |
+| Vai trò      | Thủ thư (Librarian)     |
+| Tên hiển thị | Nguyễn Thủ Thư          |
 
 **Quyền đặc biệt**: Xem tất cả phiếu mượn, thêm thành viên, kiểm tra quá hạn, khôi phục dữ liệu.
 
@@ -21,23 +21,23 @@
 
 ## Tài khoản Thành viên / Member Accounts
 
-| Email | Mật khẩu | Tên hiển thị | ID | Trạng thái |
-|-------|----------|-------------|-----|-----------|
-| `ba.nguyen@email.com` | `password123` | Nguyễn Học Bá | MEM002 | ✅ Hoạt động |
-| `dam.tran@email.com` | `password123` | Trần Dựa Dẫm | MEM003 | ✅ Hoạt động |
-| `cu.le@email.com` | `password123` | Lê Cần Cù | MEM004 | 🔴 Tạm ngưng |
-| `binh.pham@email.com` | `password123` | Phạm Trung Bình | MEM005 | 🔴 Hết hạn |
-| `biet.hoang@email.com` | `password123` | Hoàng Cá Biệt | MEM006 | ✅ Hoạt động |
+| Email                  | Mật khẩu      | Tên hiển thị    | ID     | Trạng thái   |
+| ---------------------- | ------------- | --------------- | ------ | ------------ |
+| `ba.nguyen@email.com`  | `password123` | Nguyễn Học Bá   | MEM002 | ✅ Hoạt động |
+| `dam.tran@email.com`   | `password123` | Trần Dựa Dẫm    | MEM003 | ✅ Hoạt động |
+| `cu.le@email.com`      | `password123` | Lê Cần Cù       | MEM004 | 🔴 Tạm ngưng |
+| `binh.pham@email.com`  | `password123` | Phạm Trung Bình | MEM005 | 🔴 Hết hạn   |
+| `biet.hoang@email.com` | `password123` | Hoàng Cá Biệt   | MEM006 | ✅ Hoạt động |
 
 ---
 
 ## Tài khoản không hợp lệ (dùng cho test thất bại)
 
-| Kịch bản | Email | Mật khẩu |
-|----------|-------|----------|
-| Email không tồn tại | `nobody@test.com` | `anything` |
-| Sai mật khẩu | `ba.nguyen@email.com` | `wrongpassword` |
-| Bỏ trống | *(để trống)* | *(để trống)* |
+| Kịch bản            | Email                 | Mật khẩu        |
+| ------------------- | --------------------- | --------------- |
+| Email không tồn tại | `nobody@test.com`     | `anything`      |
+| Sai mật khẩu        | `ba.nguyen@email.com` | `wrongpassword` |
+| Bỏ trống            | _(để trống)_          | _(để trống)_    |
 
 ---
 
