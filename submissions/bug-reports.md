@@ -9,92 +9,91 @@
 | **Nhóm**         | stqa_group_15 |
 | **Ngày báo cáo** | 24/05/2026    |
 
-> Chưa có bug report vì nhóm chưa thực thi test case trên hệ thống.
-
 ---
 
 ## BUG-01
 
-| Thuộc tính          | Chi tiết                       |
-| ------------------- | ------------------------------ |
-| **Mã lỗi**          | BUG-01                         |
-| **TC liên quan**    | `<!-- TC-xx -->`               |
-| **REQ liên quan**   | `<!-- REQ-xx -->`              |
-| **Mức độ**          | `<!-- High / Medium / Low -->` |
-| **Người phát hiện** | `<!-- Họ tên thành viên -->`   |
-| **Ngày phát hiện**  | `<!-- DD/MM/YYYY -->`          |
-| **Trạng thái**      | `<!-- Open / Closed -->`       |
+| Thuộc tính          | Chi tiết              |
+| ------------------- | --------------------- |
+| **Mã lỗi**          | BUG-01                |
+| **TC liên quan**    | TC-07                 |
+| **REQ liên quan**   | REQ-02                |
+| **Mức độ**          | LOW                   |
+| **Người phát hiện** | Nghiêm Trọng Quốc Anh |
+| **Ngày phát hiện**  | 27/05/2026            |
+| **Trạng thái**      | Open                  |
 
 **Tiêu đề:**
-`<!-- Mô tả hành vi lỗi cụ thể -->`
+`BOOK003 hiển thị trạng thái "Đang mượn" thay vì "Đã mượn" trong danh sách sách`
 
 **Môi trường:**
 
-- Trình duyệt: Chrome `<!-- version -->`
-- Hệ điều hành: `<!-- OS -->`
+- Trình duyệt: Chrome (chưa xác định phiên bản)
+- Hệ điều hành: Linux
 - Ngôn ngữ giao diện: Tiếng Việt
 
 **Điều kiện tiên quyết:**
-`<!-- VD: Trang đăng nhập đã mở, dữ liệu đã reset -->`
+Đăng nhập thành công, dữ liệu đang ở trạng thái seed.
 
 **Bước tái hiện:**
 
-1. `<!-- Bước 1 -->`
-2. `<!-- Bước 2 -->`
-3. `<!-- Bước 3 -->`
+1. Đăng nhập bằng tài khoản thành viên binh.pham@email.com.
+2. Vào tab "Sách".
+3. Quan sát danh sách và trạng thái của BOOK003.
 
 **Kết quả mong đợi:**
-`<!-- Kết quả đúng theo SRS -->`
+Hiển thị đầy đủ thông tin sách; BOOK003 hiển thị "Đã mượn".
 
 **Kết quả thực tế:**
-`<!-- Kết quả hệ thống thật sự trả về -->`
+BOOK003 hiển thị trạng thái "Đang mượn".
 
 **Tác động:**
-`<!-- VD: Vi phạm quy tắc nghiệp vụ cốt lõi, cho phép mượn vượt giới hạn -->`
-
+Hiển thị sai trạng thái sách trên giao diện, gây nhầm lẫn cho thành viên khi theo dõi danh mục. Ảnh hưởng trực tiếp đến trải nghiệm người dùng và tính chính xác của luồng quản lý mượn/trả.
 **Minh chứng:**
-`<!-- Đính kèm ảnh chụp màn hình nếu có -->`
+![BUG01](ScreenShot/BUG01.png)
 
 **Đề xuất xử lý:**
-`<!-- Gợi ý cách sửa lỗi nếu có -->`
+-Xác minh lại tính chính xác của dữ liệu trong tệp seed data đối với bản ghi của mã sách này.
+-Đồng bộ lại logic hiển thị trạng thái trên giao diện (UI component) để khớp với mã trạng thái (status code) trả về từ API Backend.
 
 ---
 
 ## BUG-02
 
-| Thuộc tính          | Chi tiết                       |
-| ------------------- | ------------------------------ |
-| **Mã lỗi**          | BUG-02                         |
-| **TC liên quan**    | `<!-- TC-10 -->`               |
-| **REQ liên quan**   | `<!-- REQ-xx -->`              |
-| **Mức độ**          | `<!-- High / Medium / Low -->` |
-| **Người phát hiện** | `<!-- Họ tên thành viên -->`   |
-| **Ngày phát hiện**  | `<!-- DD/MM/YYYY -->`          |
-| **Trạng thái**      | `<!-- Open / Closed -->`       |
+| Thuộc tính          | Chi tiết              |
+| ------------------- | --------------------- |
+| **Mã lỗi**          | BUG-02                |
+| **TC liên quan**    | TC-16                 |
+| **REQ liên quan**   | REQ-03                |
+| **Mức độ**          | Medium                |
+| **Người phát hiện** | Nghiêm Trọng Quốc Anh |
+| **Ngày phát hiện**  | 27/05/2026            |
+| **Trạng thái**      | Open                  |
 
 **Tiêu đề:**
-`<!-- Mô tả hành vi lỗi -->`
+`Kết hợp tìm kiếm "Flutter" với thể loại "Kinh tế" vẫn trả về sách`
 
 **Bước tái hiện:**
 
-1. `<!-- -->`
-2. `<!-- -->`
-3. `<!-- -->`
+1. Đăng nhập bằng tài khoản thành viên.
+2. Vào tab "Sách".
+3. Chọn thể loại "Kinh tế".
+4. Nhập từ khóa "Flutter".
 
 **Kết quả mong đợi:**
-`<!-- -->`
+Không hiển thị sách nào.
 
 **Kết quả thực tế:**
-`<!-- -->`
+Hệ thống hiển thị sách thuộc thể loại Kinh tế hoặc có tên "Flutter".
 
 **Tác động:**
-`<!-- -->`
+Kết hợp lọc + tìm kiếm không đúng logic giao, làm sai kết quả tìm kiếm của người dùng.
 
 **Minh chứng:**
-`<!-- -->`
+![BUG02](ScreenShot/BUG02.png)
 
 **Đề xuất xử lý:**
-`<!-- -->`
+Kiểm tra logic kết hợp điều kiện lọc thể loại và tìm kiếm theo từ khóa ở API/UI.
 
 ---
 
