@@ -65,7 +65,7 @@
 | Thuộc tính          | Chi tiết                       |
 | ------------------- | ------------------------------ |
 | **Mã lỗi**          | BUG-02                         |
-| **TC liên quan**    | `<!-- TC-xx -->`               |
+| **TC liên quan**    | `<!-- TC-10 -->`               |
 | **REQ liên quan**   | `<!-- REQ-xx -->`              |
 | **Mức độ**          | `<!-- High / Medium / Low -->` |
 | **Người phát hiện** | `<!-- Họ tên thành viên -->`   |
