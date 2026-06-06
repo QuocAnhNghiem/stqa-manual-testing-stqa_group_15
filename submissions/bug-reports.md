@@ -98,3 +98,97 @@ Kiểm tra logic kết hợp điều kiện lọc thể loại và tìm kiếm t
 ---
 
 <!-- Copy template BUG trên để thêm BUG-03, BUG-04, ... cho mỗi TC Fail -->
+
+## BUG-03
+
+| Thuộc tính          | Chi tiết                                                              |
+| ------------------- | --------------------------------------------------------------------- |
+| *Mã lỗi*          | BUG-03                                                                |
+| *TC liên quan*    | TC-21                                                                 |
+| *REQ liên quan*   | REQ-04                                                                |
+| *Mức độ*          | High  |
+| *Người phát hiện* | Bùi Việt Hoàng                                                |
+| *Ngày phát hiện*  | 27/05/2026                                                            |
+| *Trạng thái*      | Open                                                                  |
+
+*Tiêu đề:*
+Cho phép thành viên mượn quyển thứ 4 khi đã đủ 3 sách
+
+*Môi trường:*
+
+- Trình duyệt: Chrome (chưa xác định phiên bản)
+- Hệ điều hành: Windows
+- Ngôn ngữ giao diện: Tiếng Việt
+
+*Điều kiện tiên quyết:*
+Đăng nhập MEM002, đang có 3 sách đang mượn (BOOK003, BOOK008, BOOK009).
+
+*Bước tái hiện:*
+
+1. Vào tab "Sách".
+2. Chọn BOOK005 (hoặc bất kỳ sách "Có sẵn").
+3. Nhấn "Mượn".
+
+*Kết quả mong đợi:*
+Hệ thống từ chối, hiển thị thông báo đã đạt giới hạn 3 sách.
+
+*Kết quả thực tế:*
+Hệ thống vẫn cho mượn và tổng số sách đang mượn tăng lên 4.
+
+*Tác động:*
+Vi phạm giới hạn mượn, gây sai lệch quản lý tồn kho và lịch sử mượn trả.
+
+*Minh chứng:*
+Chưa có.
+
+*Đề xuất xử lý:*
+Kiểm tra điều kiện giới hạn mượn, đảm bảo chặn khi active_borrows >= 3.
+
+---
+
+## BUG-04
+
+| Thuộc tính          | Chi tiết                                                           |
+| ------------------- | ------------------------------------------------------------------ |
+| *Mã lỗi*          | BUG-04                                                             |
+| *TC liên quan*    | TC-19                                                              |
+| *REQ liên quan*   | REQ-04                                                             |
+| *Mức độ*          | High |
+| *Người phát hiện* | Bùi Việt Hoàng                                             |
+| *Ngày phát hiện*  | 27/05/2026                                                         |
+| *Trạng thái*      | Open                                                               |
+
+*Tiêu đề:*
+Tài khoản tạm ngưng bị báo "hết hạn" khi mượn sách
+
+*Môi trường:*
+
+- Trình duyệt: Chrome (chưa xác định phiên bản)
+- Hệ điều hành: Windows
+- Ngôn ngữ giao diện: Tiếng Việt
+
+*Điều kiện tiên quyết:*
+Đăng nhập MEM004 (trạng thái: Tạm ngưng).
+
+*Bước tái hiện:*
+
+1. Vào tab "Sách".
+2. Chọn một sách đang "Có sẵn".
+3. Nhấn "Mượn".
+
+*Kết quả mong đợi:*
+Hiển thị thông báo tài khoản bị tạm ngưng.
+
+*Kết quả thực tế:*
+Hiển thị thông báo "Thành viên đã hết hạn".
+
+*Tác động:*
+Sai thông điệp khiến người dùng và thủ thư hiểu nhầm tình trạng tài khoản.
+
+*Minh chứng:*
+Chưa có.
+
+*Đề xuất xử lý:*
+Rà soát mapping trạng thái tài khoản và thông điệp lỗi tại bước mượn sách.
+
+---

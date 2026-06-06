@@ -49,7 +49,7 @@
 | TC-31 | Thành viên         | Từ chối email trùng                               | -                                                        | Not Run  | -          | -      |
 | TC-32 | Thành viên         | Từ chối email không có @                          | -                                                        | Not Run  | -          | -      |
 | TC-33 | Tra cứu phiếu mượn | Thủ thư thấy tất cả, thành viên chỉ thấy của mình | -                                                        | Not Run  | -          | -      |
-| TC-34 | Tra cứu phiếu mượn | Thành viên không xem được phiếu người khác        | -                                                        | Not Run  | -          | -      |
+| TC-34 | Mượn sách          | Mượn thành công tại biên = 0 sách đang mượn (BVA) | -                                                        | Not Run  | -          | -      |
 | TC-35 | Tổng quát          | Khôi phục dữ liệu về seed data                    | -                                                        | Not Run  | -          | -      |
 
 ---
@@ -72,9 +72,9 @@
 | Đăng nhập          | 6       | 0    | 0    | 0%         |
 | Danh sách sách     | 3       | 0    | 0    | 0%         |
 | Tìm kiếm/lọc       | 7       | 0    | 1    | 0%         |
-| Mượn sách          | 7       | 0    | 0    | 0%         |
+| Mượn sách          | 8       | 0    | 0    | 0%         |
 | Trả sách           | 3       | 0    | 0    | 0%         |
 | Quá hạn            | 2       | 0    | 0    | 0%         |
 | Thành viên         | 4       | 0    | 0    | 0%         |
-| Tra cứu phiếu mượn | 2       | 0    | 0    | 0%         |
+| Tra cứu phiếu mượn | 1       | 0    | 0    | 0%         |
 | Tổng quát          | 1       | 0    | 0    | 0%         |
