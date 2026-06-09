@@ -1,80 +1,82 @@
-# Test Execution — Kết quả thực thi kiểm thử
+# Test Execution
 
-> **Hướng dẫn**: Chạy từng TC trên hệ thống https://stqa.rbc.vn, ghi lại kết quả thực tế.
-> Kết luận: **Pass** (kết quả đúng), **Fail** (kết quả sai → tạo bug report), **Blocked** (không thực hiện được vì lỗi khác chặn), **Not Run** (chưa chạy).
+> **Instructions**: Execute each TC on the system https://stqa.rbc.vn, and record the actual results.
+> Status: **Pass** (correct result), **Fail** (incorrect result → create bug report), **Blocked** (unable to execute due to other blocking bugs), **Not Run**.
 
-| Thông tin         |                        |
-| ----------------- | ---------------------- |
-| **Nhóm**          | stqa_group_15          |
-| **Ngày thực thi** | 24/05/2026             |
-| **Trình duyệt**   | Chrome (chua xac dinh) |
-| **Hệ điều hành**  | Linux                  |
-
----
-
-## Kết quả chi tiết
-
-| Mã TC | Nhóm chức năng     | Kết quả mong đợi (tóm tắt)                        | Kết quả thực tế                                          | Kết luận | Minh chứng | Bug    |
-| ----- | ------------------ | ------------------------------------------------- | -------------------------------------------------------- | -------- | ---------- | ------ |
-| TC-01 | Đăng nhập          | Đăng nhập thành công, hiển thị tên + vai trò      | -                                                        | Not Run  | -          | -      |
-| TC-02 | Đăng nhập          | Báo lỗi "Không tìm thấy thành viên"               | -                                                        | Not Run  | -          | -      |
-| TC-03 | Đăng nhập          | Báo lỗi "Mật khẩu không đúng"                     | -                                                        | Not Run  | -          | -      |
-| TC-04 | Đăng nhập          | Báo lỗi "Vui lòng nhập email và mật khẩu"         | -                                                        | Not Run  | -          | -      |
-| TC-05 | Đăng nhập          | Báo lỗi khi chỉ bỏ trống email                    | -                                                        | Not Run  | -          | -      |
-| TC-06 | Đăng nhập          | Báo lỗi khi chỉ bỏ trống mật khẩu                 | -                                                        | Not Run  | -          | -      |
-| TC-07 | Danh sách sách     | Hiển thị đủ thông tin + trạng thái seed           | -                                                        | Not Run  | -          | -      |
-| TC-08 | Danh sách sách     | Trạng thái sách cập nhật sau mượn                 | -                                                        | Not Run  | -          | -      |
-| TC-09 | Danh sách sách     | Trạng thái sách real-time sau khi trả             | -                                                        | Not Run  | -          | -      |
-| TC-10 | Tìm kiếm/lọc       | Tìm theo tên sách                                 | -                                                        | Not Run  | -          | -      |
-| TC-11 | Tìm kiếm/lọc       | Tìm theo tác giả                                  | -                                                        | Not Run  | -          | -      |
-| TC-12 | Tìm kiếm/lọc       | Case-insensitive                                  | -                                                        | Not Run  | -          | -      |
-| TC-13 | Tìm kiếm/lọc       | Thông báo "Không tìm thấy sách"                   | -                                                        | Not Run  | -          | -      |
-| TC-14 | Tìm kiếm/lọc       | Lọc theo thể loại                                 | -                                                        | Not Run  | -          | -      |
-| TC-15 | Tìm kiếm/lọc       | Tìm kiếm kết hợp lọc thể loại                     | -                                                        | Not Run  | -          | -      |
-| TC-16 | Tìm kiếm/lọc       | Kết hợp Flutter + Kinh tế không có kết quả        | Hiển thị sách thuộc thể loại Kinh tế hoặc có tên Flutter | Fail     | -          | BUG-02 |
-| TC-17 | Mượn sách          | Mượn thành công, tạo phiếu + đổi trạng thái       | -                                                        | Not Run  | -          | -      |
-| TC-18 | Mượn sách          | Từ chối sách đã mượn                              | -                                                        | Not Run  | -          | -      |
-| TC-19 | Mượn sách          | Từ chối thành viên tạm ngưng                      | -                                                        | Not Run  | -          | -      |
-| TC-20 | Mượn sách          | Từ chối thành viên hết hạn                        | -                                                        | Not Run  | -          | -      |
-| TC-21 | Mượn sách          | Từ chối vượt giới hạn 3 sách                      | -                                                        | Not Run  | -          | -      |
-| TC-22 | Mượn sách          | Từ chối mượn sách thất lạc                        | -                                                        | Not Run  | -          | -      |
-| TC-23 | Mượn sách          | Mượn tại biên = 2 sách vẫn OK (BVA)               | -                                                        | Not Run  | -          | -      |
-| TC-24 | Trả sách           | Trả thành công, đổi trạng thái                    | -                                                        | Not Run  | -          | -      |
-| TC-25 | Trả sách           | Từ chối trả sách không mượn                       | -                                                        | Not Run  | -          | -      |
-| TC-26 | Trả sách           | Cảnh báo trả quá hạn                              | -                                                        | Not Run  | -          | -      |
-| TC-27 | Quá hạn            | Đánh dấu phiếu quá hạn                            | -                                                        | Not Run  | -          | -      |
-| TC-28 | Quá hạn            | Thành viên chỉ thấy phiếu quá hạn của mình        | -                                                        | Not Run  | -          | -      |
-| TC-29 | Thành viên         | Thêm thành viên hợp lệ                            | -                                                        | Not Run  | -          | -      |
-| TC-30 | Thành viên         | Từ chối email không hợp lệ                        | -                                                        | Not Run  | -          | -      |
-| TC-31 | Thành viên         | Từ chối email trùng                               | -                                                        | Not Run  | -          | -      |
-| TC-32 | Thành viên         | Từ chối email không có @                          | -                                                        | Not Run  | -          | -      |
-| TC-33 | Tra cứu phiếu mượn | Thủ thư thấy tất cả, thành viên chỉ thấy của mình | -                                                        | Not Run  | -          | -      |
-| TC-34 | Mượn sách          | Mượn thành công tại biên = 0 sách đang mượn (BVA) | -                                                        | Not Run  | -          | -      |
-| TC-35 | Tổng quát          | Khôi phục dữ liệu về seed data                    | -                                                        | Not Run  | -          | -      |
+| Information         |                        |
+| ------------------- | ---------------------- |
+| **Team**            | stqa_group_15          |
+| **Execution Date**  | 06/06/2026             |
+| **Browser**         | Chrome                 |
+| **OS**              | Linux                  |
 
 ---
 
-## Tổng hợp kết quả
+## Detailed Results
 
-| Chỉ số            | Giá trị |
-| ----------------- | ------- |
-| Tổng số test case | 35      |
-| Pass              | 0       |
-| Fail              | 1       |
-| Blocked           | 0       |
-| Not Run           | 34      |
-| **Tỷ lệ Pass**    | 0%      |
+| TC ID | Functional Group   | Expected Result (Summary)                         | Actual Result                                            | Status | Evidence   | Bug    |
+| ----- | ------------------ | ------------------------------------------------- | -------------------------------------------------------- | ------ | ---------- | ------ |
+| TC-01 | Login              | Login successful, shows name + role               | As expected                                              | Pass   | -          | -      |
+| TC-02 | Login              | Shows error "Member not found"                    | As expected                                              | Pass   | -          | -      |
+| TC-03 | Login              | Shows error "Incorrect password"                  | As expected                                              | Pass   | -          | -      |
+| TC-04 | Login              | Shows error "Please enter email and password"     | As expected                                              | Pass   | -          | -      |
+| TC-05 | Login              | Shows error when only email is empty              | As expected                                              | Pass   | -          | -      |
+| TC-06 | Login              | Shows error when only password is empty           | As expected                                              | Pass   | -          | -      |
+| TC-07 | Book List          | Full info displayed + matches seed status         | BOOK003 shows status "Borrowing" instead of "Borrowed"   | Fail   | BUG01.png  | BUG-01 |
+| TC-08 | Book List          | Book status updates after borrowing               | As expected                                              | Pass   | -          | -      |
+| TC-09 | Book List          | Book status real-time update after returning      | As expected                                              | Pass   | -          | -      |
+| TC-10 | Search/Filter      | Search by book name                               | As expected                                              | Pass   | -          | -      |
+| TC-11 | Search/Filter      | Search by author                                  | As expected                                              | Pass   | -          | -      |
+| TC-12 | Search/Filter      | Case-insensitive search                           | As expected                                              | Pass   | -          | -      |
+| TC-13 | Search/Filter      | Message "No books found"                          | As expected                                              | Pass   | -          | -      |
+| TC-14 | Search/Filter      | Filter by category                                | As expected                                              | Pass   | -          | -      |
+| TC-15 | Search/Filter      | Combine search with category filter               | As expected                                              | Pass   | -          | -      |
+| TC-16 | Search/Filter      | Combine Flutter + Economics returns no result     | Displays books in Economics category or named Flutter    | Fail   | BUG02.png  | BUG-02 |
+| TC-17 | Borrow Book        | Borrow successful, record created + status updated| As expected                                              | Pass   | -          | -      |
+| TC-18 | Borrow Book        | Deny borrowing already borrowed books             | As expected                                              | Pass   | -          | -      |
+| TC-19 | Borrow Book        | Deny suspended member                             | Shows "Member has expired" instead of "Suspended"        | Fail   | BUG04.png  | BUG-04 |
+| TC-20 | Borrow Book        | Deny expired member                               | As expected                                              | Pass   | -          | -      |
+| TC-21 | Borrow Book        | Deny borrowing beyond limit of 3 books            | System allows borrowing the 4th book                     | Fail   | BUG03.png  | BUG-03 |
+| TC-22 | Borrow Book        | Deny borrowing lost books                         | As expected                                              | Pass   | -          | -      |
+| TC-23 | Borrow Book        | Borrow at boundary = 2 active books works (BVA)   | As expected                                              | Pass   | -          | -      |
+| TC-24 | Return Book        | Return successful, status updated                 | As expected                                              | Pass   | -          | -      |
+| TC-25 | Return Book        | Deny returning a book not borrowed                | As expected                                              | Pass   | -          | -      |
+| TC-26 | Return Book        | Warning when returning overdue book               | Return successful but no warning is displayed            | Fail   | BUG06.png  | BUG-06 |
+| TC-27 | Overdue Checking   | Mark record as overdue                            | Record due today not marked; 2nd scan gives wrong count  | Fail   | BUG07.png  | BUG-07, BUG-08 |
+| TC-28 | Overdue Checking   | Member only sees their own overdue records        | As expected                                              | Pass   | -          | -      |
+| TC-29 | Member Management  | Add valid member                                  | Shows "Invalid email" error due to reversed regex        | Fail   | BUG10.png  | BUG-10 |
+| TC-30 | Member Management  | Deny invalid email                                | Accepts email without a dot, creates successfully        | Fail   | BUG09.png  | BUG-09 |
+| TC-31 | Member Management  | Deny duplicate email                              | Shows "Invalid email" error (side effect of BUG-10)      | Fail   | BUG10.png  | BUG-10 |
+| TC-32 | Member Management  | Deny email without @                              | As expected                                              | Pass   | -          | -      |
+| TC-33 | View Borrow Record | Librarian sees all, Member sees only their own    | Member can see and return records of other members       | Fail   | BUG11.png  | BUG-11 |
+| TC-34 | Borrow Book        | Borrow successful at boundary = 0 active books    | As expected                                              | Pass   | -          | -      |
+| TC-35 | General            | Restore to seed data                              | As expected                                              | Pass   | -          | -      |
 
-### Kết quả theo nhóm chức năng
+*Note: The missing "Borrow" functionality for the Librarian on the Books tab does not map 1:1 to a specific TC, so it is recorded as BUG-05 (Additional Discovery) in the Bug Reports.*
 
-| Nhóm               | Tổng TC | Pass | Fail | Tỷ lệ Pass |
-| ------------------ | ------- | ---- | ---- | ---------- |
-| Đăng nhập          | 6       | 0    | 0    | 0%         |
-| Danh sách sách     | 3       | 0    | 0    | 0%         |
-| Tìm kiếm/lọc       | 7       | 0    | 1    | 0%         |
-| Mượn sách          | 8       | 0    | 0    | 0%         |
-| Trả sách           | 3       | 0    | 0    | 0%         |
-| Quá hạn            | 2       | 0    | 0    | 0%         |
-| Thành viên         | 4       | 0    | 0    | 0%         |
-| Tra cứu phiếu mượn | 1       | 0    | 0    | 0%         |
-| Tổng quát          | 1       | 0    | 0    | 0%         |
+---
+
+## Result Summary
+
+| Metric                 | Value   |
+| ---------------------- | ------- |
+| Total Test Cases       | 35      |
+| Pass                   | 25      |
+| Fail                   | 10      |
+| Blocked                | 0       |
+| Not Run                | 0       |
+| **Pass Rate**          | 71.4%   |
+
+### Results by Functional Group
+
+| Group                  | Total TC | Pass | Fail | Pass Rate  |
+| ---------------------- | -------- | ---- | ---- | ---------- |
+| Login                  | 6        | 6    | 0    | 100%       |
+| Book List              | 3        | 2    | 1    | 66.7%      |
+| Search/Filter          | 7        | 6    | 1    | 85.7%      |
+| Borrow Book            | 8        | 6    | 2    | 75.0%      |
+| Return Book            | 3        | 2    | 1    | 66.7%      |
+| Overdue Checking       | 2        | 1    | 1    | 50.0%      |
+| Member Management      | 4        | 1    | 3    | 25.0%      |
+| View Borrow Record     | 1        | 0    | 1    | 0%         |
+| General                | 1        | 1    | 0    | 100%       |
