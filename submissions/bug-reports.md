@@ -101,11 +101,11 @@ Check the logic for combining the category filter and keyword search conditions 
 | **Status** | Open |
 
 **Preconditions:**
-Logged in as MEM002, currently has 3 active borrowed books (BOOK003, BOOK008, BOOK009).
+Logged in as MEM002, currently has 3 active borrowed books (BOOK001, BOOK006, BOOK007).
 
 **Steps to Reproduce:**
 1. Navigate to the "Books" tab.
-2. Select BOOK005 (or any "Available" book).
+2. Select BOOK008 (or any "Available" book).
 3. Click "Borrow" (Mượn).
 
 **Expected Result:**
