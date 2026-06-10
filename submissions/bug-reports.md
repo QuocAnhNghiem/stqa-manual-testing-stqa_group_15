@@ -118,7 +118,7 @@ The system allows the borrowing process, and the total number of borrowed books 
 Violates the borrowing limit, causing errors in inventory management and borrow/return history.
 
 **Evidence:**
-None yet.
+![BUG03](ScreenShot/BUG03.png)
 
 **Proposed Solution:**
 Check the borrowing limit condition to ensure the request is blocked when `active_borrows >= 3`.
@@ -154,7 +154,7 @@ Displays the message "Member has expired" (Thành viên đã hết hạn).
 Incorrect error message causes users and librarians to misunderstand the account's status.
 
 **Evidence:**
-None yet.
+![BUG04](ScreenShot/BUG04.png)
 
 **Proposed Solution:**
 Review the mapping between account status and error messages in the book borrowing step.
@@ -194,7 +194,8 @@ The Librarian sees a "Borrow" button on books with an "Available" status in the 
 Librarian completely loses the ability to borrow books for members — this is a core business function according to the SRS. Directly violates SRS Section 1 (Librarian privileges) and Section 4.1.
 
 **Evidence:**
-None yet.
+![BUG05_1](ScreenShot/BUG05_1.png)
+![BUG05_2](ScreenShot/BUG05_2.png)
 
 **Proposed Solution:**
 Add a "Borrow" button on the Books tab for the Librarian role, with a flow: click Borrow → select member → confirm borrowing the book for that member.
@@ -230,7 +231,7 @@ No warning message is displayed.
 The user is unaware that the book was returned late, missing overdue warning data.
 
 **Evidence:**
-None yet.
+![BUG06](ScreenShot/BUG06.png)
 
 **Proposed Solution:**
 Compare `returnDate` and `dueDate` to trigger a warning display when the book is returned late.
@@ -266,7 +267,7 @@ The borrow record is not marked as "Overdue".
 Incorrect status at the due date boundary, affecting overdue processing and reminders.
 
 **Evidence:**
-None yet.
+![BUG07](ScreenShot/BUG07.png)
 
 **Proposed Solution:**
 Clarify the logic for comparing due dates, correctly handling the `dueDate == today` case (use `<=` instead of `<`).
@@ -304,7 +305,8 @@ The second click displays a different number of overdue records than the first, 
 Reduces system reliability. The librarian does not know which result is correct for processing overdue records.
 
 **Evidence:**
-None yet.
+![BUG08_1](ScreenShot/BUG08_1.png)
+![BUG08_2](ScreenShot/BUG08_2.png)
 
 **Proposed Solution:**
 Ensure the overdue list is cleared/reset before each scan. The scanning logic must evaluate from scratch.
@@ -338,7 +340,8 @@ The system successfully creates the member.
 Saves incorrectly formatted emails, causing errors in notifications/reminders and corrupting system data.
 
 **Evidence:**
-None yet.
+![BUG09_1](ScreenShot/BUG09_1.png)
+![BUG09_2](ScreenShot/BUG09_2.png)
 
 **Proposed Solution:**
 Add/tighten the email validation regex, requiring a dot in the domain section.
@@ -375,7 +378,8 @@ TC-31 (Entering `ba.nguyen@email.com`) failing with an "Invalid email" message (
 Blocks the creation of valid new members, impacting registration workflows. All properly formatted emails are rejected.
 
 **Evidence:**
-None yet.
+![BUG10_1](ScreenShot/BUG10_1.png)
+![BUG10_2](ScreenShot/BUG10_2.png)
 
 **Proposed Solution:**
 Check the email validation logic, fix the reversed regex.
@@ -411,7 +415,7 @@ The member still sees MEM006's record and can return the book.
 Serious access control violation, data leakage, and unauthorized manipulation.
 
 **Evidence:**
-None yet.
+![BUG11](ScreenShot/BUG11.png)
 
 **Proposed Solution:**
 Restrict queries by `memberId == currentUserId` for the Member role and check authorization on the backend/controller logic when performing the Return action.
